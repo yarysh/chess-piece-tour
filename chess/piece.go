@@ -81,7 +81,7 @@ func (p *Piece) Tour() error {
 		for j := 1; j < len(possibleMoves); j++ {
 			move := possibleMoves[j]
 			possibles := p.getPossibleMoves(move.X, move.Y)
-			if len(possibles) > 0 && len(possibles) < len(nextPossibleMoves) {
+			if len(possibles) < len(nextPossibleMoves) {
 				nextMove = move
 				nextPossibleMoves = possibles
 			}
